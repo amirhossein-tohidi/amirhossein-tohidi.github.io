@@ -372,16 +372,33 @@ h2 {
 .company-link {
     display: inline-flex;
     align-items: center;
-    justify-content: center;
+    gap: 5px;
     margin-left: 8px;
     color: var(--text-soft);
-    font-size: 0.95rem;
+    font-size: 0.82rem;
+    font-weight: 700;
+    vertical-align: middle;
     transition: color 0.2s ease, transform 0.2s ease;
 }
 
 .company-link:hover {
     color: var(--primary);
     transform: translateY(-1px);
+}
+
+.company-link-icon {
+    font-size: 0.9rem;
+    line-height: 1;
+}
+
+.company-link-type {
+    color: var(--primary);
+}
+
+.company-link-meta {
+    color: var(--text-soft);
+    font-size: 0.78rem;
+    font-weight: 600;
 }
 
 .experience-list {
