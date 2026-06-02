@@ -15,7 +15,9 @@
         <a href="#home" class="logo">Amirhossein<span>.</span></a>
 
         <button class="menu-toggle" id="menuToggle" aria-label="Open menu">
-            ☰
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M4 7h16M4 12h16M4 17h16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
         </button>
 
         <ul class="nav-links" id="navLinks">
@@ -31,10 +33,6 @@
 <main>
     <section id="home" class="hero section">
         <div class="container hero-layout">
-            <div class="hero-image-wrap">
-                <img src="assets/images/profile.jpg" alt="Amirhossein Tohidi" class="hero-image"/>
-            </div>
-
             <div class="hero-content">
                 <p class="eyebrow">.NET Backend Developer | Distributed Systems | Fintech Backend</p>
 
@@ -49,15 +47,35 @@
                 </p>
 
                 <div class="hero-meta">
-                    <span>Backend Systems</span>
-                    <span>Financial Systems</span>
-                    <span>Event-Driven Architecture</span>
-                    <span>High-Throughput Services</span>
+                    <span>Financial systems</span>
+                    <span>Reliability engineering</span>
+                    <span>High-throughput services</span>
+                    <span>Event-driven architecture</span>
                 </div>
 
                 <div class="hero-actions">
                     <a href="#projects" class="btn btn-primary">View Projects</a>
                     <a href="#experience" class="btn btn-secondary">View Experience</a>
+                    <a href="assets/files/amirhossein-tohidi-resume-en-2026.pdf" download="amirhossein-tohidi-resume-en-2026.pdf" data-resume-download class="btn btn-secondary btn-with-icon">
+    <span class="btn-icon resume-icon">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M14 2.75H7.5A2.5 2.5 0 0 0 5 5.25v13.5a2.5 2.5 0 0 0 2.5 2.5h9a2.5 2.5 0 0 0 2.5-2.5V7.75L14 2.75Z"/>
+        <path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M14 2.75v5h5M12 11.5v5M9.75 14.25 12 16.5l2.25-2.25M9 18.5h6"/>
+      </svg>
+    </span>
+                        English Resume
+                    </a>
+
+                    <a href="assets/files/amirhossein-tohidi-resume-fa-2026.pdf" download="amirhossein-tohidi-resume-fa-2026.pdf" data-resume-download class="btn btn-secondary btn-with-icon">
+    <span class="btn-icon resume-icon">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M14 2.75H7.5A2.5 2.5 0 0 0 5 5.25v13.5a2.5 2.5 0 0 0 2.5 2.5h9a2.5 2.5 0 0 0 2.5-2.5V7.75L14 2.75Z"/>
+        <path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M14 2.75v5h5M12 11.5v5M9.75 14.25 12 16.5l2.25-2.25M9 18.5h6"/>
+      </svg>
+    </span>
+                        Persian Resume
+                    </a>
+
                     <a href="https://github.com/amirhossein-tohidi" target="_blank" class="btn btn-secondary btn-with-icon">
     <span class="btn-icon github-icon">
       <svg viewBox="0 0 24 24" aria-hidden="true">
@@ -79,34 +97,69 @@
                     </a>
                 </div>
             </div>
+
+            <aside class="hero-visual" aria-label="Profile summary">
+                <div class="hero-image-wrap">
+                    <img src="assets/images/profile.jpg" alt="Amirhossein Tohidi" class="hero-image"/>
+                </div>
+
+                <div class="hero-profile-card">
+                    <span class="profile-status">Engineering focus</span>
+                    <strong>Backend systems, fintech workflows, and distributed services.</strong>
+                    <p>Based in Tehran, working with .NET, messaging, databases, and production engineering.</p>
+                </div>
+            </aside>
+        </div>
+    </section>
+
+    <section class="proof-strip" aria-label="Professional highlights">
+        <div class="container proof-grid">
+            <div class="proof-item">
+                <span class="proof-value">8+ yrs</span>
+                <span class="proof-label">Professional Development</span>
+            </div>
+
+            <div class="proof-item">
+                <span class="proof-value">4+ yrs</span>
+                <span class="proof-label">High-Scale Financial & Mission-Critical Systems</span>
+            </div>
+
+            <div class="proof-item">
+                <span class="proof-value">.NET</span>
+                <span class="proof-label">C#, ASP.NET Core, EF Core</span>
+            </div>
+
+            <div class="proof-item">
+                <span class="proof-value">Scale</span>
+                <span class="proof-label">Messaging, Consistency, Observability</span>
+            </div>
         </div>
     </section>
 
     <section id="about" class="section">
-        <div class="container grid-two">
-            <div>
-                <p class="section-label">About</p>
-                <h2>Backend developer focused on reliable, scalable, and maintainable systems.</h2>
+        <div class="container grid-two about-layout">
+            <div class="about-heading">
+                <p class="section-label">About me</p>
             </div>
 
             <div class="section-text">
                 <p>
-                    I am a .NET Backend Developer with experience in financial, mission-critical,
-                    and high-throughput systems. I enjoy working on complex engineering problems that
-                    require accuracy, deep analysis, consistency, and long-term maintainability.
+                    I am passionate about problem-solving, complex challenges, and finding sustainable
+                    solutions. I enjoy working on problems that require precision, focus, deep analysis,
+                    and a multi-perspective approach.
                 </p>
 
                 <p>
-                    My professional focus includes backend service design, distributed systems,
-                    event-driven architecture, messaging, performance optimization, and reliable
-                    asynchronous processing. I have hands-on experience with .NET, C#, ASP.NET Core,
-                    Kafka, RabbitMQ, CQRS, DDD, SQL Server, MongoDB, Redis, ClickHouse, Docker,
-                    and observability tools.
+                    In teamwork, I consider myself a reliable and effective team member; someone who
+                    fulfills responsibilities while actively contributing to technical discussions,
+                    knowledge sharing, idea review, and finding the best solution for the team.
                 </p>
 
                 <p>
-                    I value teamwork, technical discussions, code quality, and building solutions that
-                    can work reliably in real-world production environments.
+                    I consider responsibility, strong focus, follow-through until results are achieved,
+                    and reliability among my key strengths. I usually approach professional collaborations
+                    with a long-term mindset, and I perform better in stable, team-oriented environments
+                    where I can build effective professional relationships.
                 </p>
             </div>
         </div>
@@ -116,10 +169,20 @@
         <div class="container">
             <p class="section-label">Skills</p>
             <h2>Technical Skills</h2>
+            <p class="section-intro">
+                A focused backend toolkit shaped by fintech products, distributed workflows,
+                production operations, and long-lived enterprise systems.
+            </p>
 
             <div class="skills-grid">
-                <div class="card">
-                    <h3>Backend Development</h3>
+                <div class="card skill-card skill-card-primary">
+                    <div class="skill-card-head">
+                        <span class="skill-icon">.NET</span>
+                        <div>
+                            <h3>Backend Development</h3>
+                            <p>Production APIs, service boundaries, and backend workflows built around .NET.</p>
+                        </div>
+                    </div>
                     <div class="tags">
                         <span>.NET</span>
                         <span>C#</span>
@@ -131,8 +194,14 @@
                     </div>
                 </div>
 
-                <div class="card">
-                    <h3>Architecture & Design</h3>
+                <div class="card skill-card">
+                    <div class="skill-card-head">
+                        <span class="skill-icon">ARCH</span>
+                        <div>
+                            <h3>Architecture & Design</h3>
+                            <p>Maintainable domain models, clear application layers, and scalable service design.</p>
+                        </div>
+                    </div>
                     <div class="tags">
                         <span>Clean Architecture</span>
                         <span>DDD</span>
@@ -144,8 +213,14 @@
                     </div>
                 </div>
 
-                <div class="card">
-                    <h3>Messaging & Reliability</h3>
+                <div class="card skill-card">
+                    <div class="skill-card-head">
+                        <span class="skill-icon">EDA</span>
+                        <div>
+                            <h3>Messaging & Reliability</h3>
+                            <p>Asynchronous processing, consistency patterns, retries, and resilient workflows.</p>
+                        </div>
+                    </div>
                     <div class="tags">
                         <span>Kafka</span>
                         <span>RabbitMQ</span>
@@ -156,8 +231,14 @@
                     </div>
                 </div>
 
-                <div class="card">
-                    <h3>Databases & Storage</h3>
+                <div class="card skill-card">
+                    <div class="skill-card-head">
+                        <span class="skill-icon">DB</span>
+                        <div>
+                            <h3>Databases & Storage</h3>
+                            <p>Relational, document, cache, search, and analytical storage for backend systems.</p>
+                        </div>
+                    </div>
                     <div class="tags">
                         <span>SQL Server</span>
                         <span>PostgreSQL</span>
@@ -169,8 +250,14 @@
                     </div>
                 </div>
 
-                <div class="card">
-                    <h3>Testing</h3>
+                <div class="card skill-card">
+                    <div class="skill-card-head">
+                        <span class="skill-icon">QA</span>
+                        <div>
+                            <h3>Testing</h3>
+                            <p>Unit, integration, acceptance, and container-backed tests for reliable releases.</p>
+                        </div>
+                    </div>
                     <div class="tags">
                         <span>Unit Testing</span>
                         <span>Integration Testing</span>
@@ -182,8 +269,14 @@
                     </div>
                 </div>
 
-                <div class="card">
-                    <h3>DevOps & Observability</h3>
+                <div class="card skill-card">
+                    <div class="skill-card-head">
+                        <span class="skill-icon">OPS</span>
+                        <div>
+                            <h3>DevOps & Observability</h3>
+                            <p>Local environments, delivery pipelines, metrics, logs, and operational visibility.</p>
+                        </div>
+                    </div>
                     <div class="tags">
                         <span>Docker</span>
                         <span>Docker Compose</span>
@@ -203,15 +296,30 @@
         <div class="container">
             <p class="section-label">Projects</p>
             <h2>Selected Projects</h2>
+            <p class="section-intro">
+                Practical backend projects that show how I approach reliability, consistency,
+                local infrastructure, and production-oriented service design.
+            </p>
 
             <div class="projects-grid">
                 <article class="project-card">
                     <div>
+                        <p class="project-kicker">Fintech case study</p>
                         <h3>Fintech Wallet Service</h3>
                         <p>
                             Production-ready fintech wallet service built with .NET, Clean Architecture,
                             DDD, CQRS, and Event-Driven patterns.
                         </p>
+
+                        <div class="project-detail">
+                            <span>Problem</span>
+                            <p>Model wallet balance changes safely across reservation, refund, and promotional credit workflows.</p>
+                        </div>
+
+                        <div class="project-detail">
+                            <span>Built</span>
+                            <p>A double-entry ledger with idempotent commands, background workers, and inbox/outbox messaging.</p>
+                        </div>
 
                         <ul>
                             <li>Double-entry ledger</li>
@@ -220,6 +328,13 @@
                             <li>Reservation, Promo Credit, and Refund workflows</li>
                             <li>SQL Server, Redis, Kafka, and background workers</li>
                         </ul>
+
+                        <div class="project-focus tags">
+                            <span>.NET</span>
+                            <span>CQRS</span>
+                            <span>Kafka</span>
+                            <span>Consistency</span>
+                        </div>
                     </div>
 
                     <a href="https://github.com/amirhossein-tohidi/fintech-wallet-service" target="_blank" class="project-link">
@@ -229,10 +344,21 @@
 
                 <article class="project-card">
                     <div>
+                        <p class="project-kicker">Developer infrastructure</p>
                         <h3>Docker Compose Dev Toolkit</h3>
                         <p>
                             Ready-to-use Docker Compose toolkit for local backend development and practice.
                         </p>
+
+                        <div class="project-detail">
+                            <span>Problem</span>
+                            <p>Backend practice often needs repeatable local infrastructure without spending time wiring each service again.</p>
+                        </div>
+
+                        <div class="project-detail">
+                            <span>Built</span>
+                            <p>A reusable Docker Compose workspace with databases, brokers, observability, and service-specific guides.</p>
+                        </div>
 
                         <ul>
                             <li>MongoDB, Redis, SQL Server, ClickHouse</li>
@@ -241,6 +367,13 @@
                             <li>Service-specific run guides</li>
                             <li>Ready-to-use .env and .env.example files</li>
                         </ul>
+
+                        <div class="project-focus tags">
+                            <span>Docker</span>
+                            <span>Kafka</span>
+                            <span>Observability</span>
+                            <span>Local Dev</span>
+                        </div>
                     </div>
 
                     <a href="https://github.com/amirhossein-tohidi/docker-compose-dev-toolkit" target="_blank" class="project-link">
@@ -255,6 +388,10 @@
         <div class="container">
             <p class="section-label">Experience</p>
             <h2>Professional Experience</h2>
+            <p class="section-intro">
+                A path through enterprise software, fuel distribution systems, capital-market platforms,
+                and high-scale mission-critical backend services.
+            </p>
 
             <div class="experience-list">
                 <article class="experience-card">
@@ -291,6 +428,14 @@
                         <li>Worked on microservice-based architecture and Dockerized deployment environments.</li>
                         <li>Implemented unit and integration tests using FluentValidation, Testcontainers, and Gherkin/SpecFlow.</li>
                     </ul>
+
+                    <div class="experience-tags tags">
+                        <span>.NET</span>
+                        <span>Kafka</span>
+                        <span>gRPC</span>
+                        <span>ClickHouse</span>
+                        <span>Testcontainers</span>
+                    </div>
                 </article>
 
                 <article class="experience-card">
@@ -337,6 +482,14 @@
                         <li>Implemented reliable asynchronous processing using Inbox/Outbox Pattern and Retry mechanisms.</li>
                         <li>Used SQL Server, MongoDB, and Redis to optimize read/write workloads and improve system performance.</li>
                     </ul>
+
+                    <div class="experience-tags tags">
+                        <span>.NET</span>
+                        <span>Capital Markets</span>
+                        <span>RabbitMQ</span>
+                        <span>CQRS</span>
+                        <span>Redis</span>
+                    </div>
                 </article>
 
                 <article class="experience-card">
@@ -373,6 +526,13 @@
                         <li>Used Elasticsearch for search, analysis, and better data accessibility.</li>
                         <li>Optimized performance and supported services in production environments.</li>
                     </ul>
+
+                    <div class="experience-tags tags">
+                        <span>.NET Core</span>
+                        <span>SQL Server</span>
+                        <span>Elasticsearch</span>
+                        <span>Production Support</span>
+                    </div>
                 </article>
 
                 <article class="experience-card">
@@ -411,6 +571,13 @@
                         <li>Developed SQL Server migration scripts and tools for legacy data.</li>
                         <li>Maintained, debugged, and developed new features for operational systems.</li>
                     </ul>
+
+                    <div class="experience-tags tags">
+                        <span>C#</span>
+                        <span>ASP.NET Web Forms</span>
+                        <span>SQL Server</span>
+                        <span>Enterprise Systems</span>
+                    </div>
                 </article>
             </div>
         </div>
@@ -467,16 +634,42 @@
     </section>
 
     <section id="contact" class="section section-muted">
-        <div class="container contact-card">
-            <p class="section-label">Contact</p>
-            <h2>Let's connect</h2>
+        <div class="container contact-card contact-layout">
+            <div class="contact-copy">
+                <p class="section-label">Contact</p>
+                <h2>Let's build reliable backend systems.</h2>
 
-            <p>
-                You can find my work on GitHub or contact me for backend development,
-                distributed systems, fintech backend, and software engineering opportunities.
-            </p>
+                <p>
+                    Reach out for backend engineering, fintech platforms, distributed systems,
+                    and .NET services where reliability, scale, and long-term maintainability
+                    matter.
+                </p>
+
+            </div>
 
             <div class="contact-list">
+                <a href="assets/files/amirhossein-tohidi-resume-en-2026.pdf" download="amirhossein-tohidi-resume-en-2026.pdf" data-resume-download class="contact-item">
+    <span class="contact-icon resume-icon">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M14 2.75H7.5A2.5 2.5 0 0 0 5 5.25v13.5a2.5 2.5 0 0 0 2.5 2.5h9a2.5 2.5 0 0 0 2.5-2.5V7.75L14 2.75Z"/>
+        <path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M14 2.75v5h5M12 11.5v5M9.75 14.25 12 16.5l2.25-2.25M9 18.5h6"/>
+      </svg>
+    </span>
+                    <span class="contact-label">Resume</span>
+                    <span class="contact-value">Download English Resume</span>
+                </a>
+
+                <a href="assets/files/amirhossein-tohidi-resume-fa-2026.pdf" download="amirhossein-tohidi-resume-fa-2026.pdf" data-resume-download class="contact-item">
+    <span class="contact-icon resume-icon">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M14 2.75H7.5A2.5 2.5 0 0 0 5 5.25v13.5a2.5 2.5 0 0 0 2.5 2.5h9a2.5 2.5 0 0 0 2.5-2.5V7.75L14 2.75Z"/>
+        <path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M14 2.75v5h5M12 11.5v5M9.75 14.25 12 16.5l2.25-2.25M9 18.5h6"/>
+      </svg>
+    </span>
+                    <span class="contact-label">Resume</span>
+                    <span class="contact-value">Download Persian Resume</span>
+                </a>
+
                 <a href="https://github.com/amirhossein-tohidi" target="_blank" class="contact-item">
     <span class="contact-icon github-icon">
       <svg viewBox="0 0 24 24" aria-hidden="true">
@@ -510,7 +703,11 @@
                 </a>
 
                 <a href="tel:+989120299061" class="contact-item">
-                    <span class="contact-icon phone-icon">📞</span>
+                    <span class="contact-icon phone-icon">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5 10 8.4l-1.4 1.35a11.1 11.1 0 0 0 5.65 5.65L15.6 14l3.9 1.75v3.1c0 .62-.5 1.13-1.13 1.13A14.35 14.35 0 0 1 4.02 5.63c0-.62.5-1.13 1.13-1.13h3.1Z"/>
+      </svg>
+                    </span>
                     <span class="contact-label">Phone</span>
                     <span class="contact-value">Messaging apps available · (+98) 912 029 9061</span>
                 </a>
