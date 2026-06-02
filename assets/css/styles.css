@@ -1,4 +1,6 @@
 :root {
+    --font-body: "Inter", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, Helvetica, sans-serif;
+    --font-display: "Manrope", "Inter", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, Helvetica, sans-serif;
     --bg: #050816;
     --bg-muted: #0b1020;
     --card: #111827;
@@ -25,7 +27,7 @@ html {
 }
 
 body {
-    font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, Helvetica, sans-serif;
+    font-family: var(--font-body);
     background: linear-gradient(180deg, rgba(15, 23, 42, 0.28), transparent 28rem),
     radial-gradient(circle at 18% 8%, rgba(56, 189, 248, 0.14), transparent 30rem),
     radial-gradient(circle at 82% 2%, rgba(16, 185, 129, 0.08), transparent 28rem),
@@ -50,6 +52,7 @@ ul {
 
 .section {
     padding: 96px 0;
+    scroll-margin-top: 96px;
 }
 
 .section-muted {
@@ -75,9 +78,10 @@ ul {
 }
 
 .logo {
+    font-family: var(--font-display);
     font-weight: 800;
     font-size: 1.25rem;
-    letter-spacing: -0.03em;
+    letter-spacing: 0;
 }
 
 .logo span {
@@ -186,10 +190,11 @@ ul {
 }
 
 .hero h1 {
+    font-family: var(--font-display);
     max-width: 720px;
     font-size: clamp(3.2rem, 6vw, 5.4rem);
     line-height: 1.03;
-    letter-spacing: -0.04em;
+    letter-spacing: 0;
     margin-bottom: 24px;
 }
 
@@ -372,22 +377,24 @@ ul {
 }
 
 h2 {
+    font-family: var(--font-display);
     font-size: clamp(2rem, 3.4vw, 3rem);
     line-height: 1.16;
-    letter-spacing: -0.025em;
+    letter-spacing: 0;
     margin-bottom: 28px;
     text-wrap: balance;
 }
 
 .about-layout {
     grid-template-columns: 1fr;
-    gap: 24px;
+    gap: 28px;
 }
 
 .about-heading {
     display: flex;
-    align-items: center;
-    gap: 16px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
     padding-bottom: 18px;
     border-bottom: 1px solid var(--border);
 }
@@ -400,8 +407,39 @@ h2 {
     max-width: none;
     font-size: clamp(1.45rem, 2.2vw, 2rem);
     line-height: 1.15;
-    letter-spacing: -0.015em;
+    letter-spacing: 0;
     font-weight: 800;
+    margin-bottom: 0;
+}
+
+.section-head {
+    display: grid;
+    gap: 18px;
+}
+
+.section-head-skills {
+    max-width: 760px;
+    margin-bottom: 40px;
+}
+
+.section-head-skills h2 {
+    max-width: 640px;
+    margin-bottom: 0;
+}
+
+.section-head-skills .section-intro {
+    margin: 0;
+    max-width: 700px;
+}
+
+.section-head-split {
+    grid-template-columns: minmax(0, 1fr) minmax(320px, 0.86fr);
+    align-items: end;
+    gap: 28px 48px;
+    margin-bottom: 40px;
+}
+
+.section-head-split h2 {
     margin-bottom: 0;
 }
 
@@ -410,6 +448,11 @@ h2 {
     color: var(--text-muted);
     font-size: 1.05rem;
     margin: -12px 0 0;
+}
+
+.section-head-split .section-intro {
+    margin: 0;
+    max-width: 100%;
 }
 
 .section-text {
@@ -450,16 +493,48 @@ h2 {
 }
 
 .skill-card {
+    --skill-accent: var(--primary);
+    --skill-accent-rgb: 56, 189, 248;
     position: relative;
     overflow: hidden;
+}
+
+.skill-card-dotnet {
+    --skill-accent: #38bdf8;
+    --skill-accent-rgb: 56, 189, 248;
+}
+
+.skill-card-architecture {
+    --skill-accent: #2dd4bf;
+    --skill-accent-rgb: 45, 212, 191;
+}
+
+.skill-card-messaging {
+    --skill-accent: #fbbf24;
+    --skill-accent-rgb: 251, 191, 36;
+}
+
+.skill-card-data {
+    --skill-accent: #f97316;
+    --skill-accent-rgb: 249, 115, 22;
+}
+
+.skill-card-testing {
+    --skill-accent: #a3e635;
+    --skill-accent-rgb: 163, 230, 53;
+}
+
+.skill-card-ops {
+    --skill-accent: #fb7185;
+    --skill-accent-rgb: 251, 113, 133;
 }
 
 .skill-card::before {
     content: "";
     position: absolute;
     inset: 0;
-    border-top: 1px solid rgba(56, 189, 248, 0.2);
-    background: linear-gradient(135deg, rgba(56, 189, 248, 0.08), transparent 42%);
+    border-top: 1px solid rgba(var(--skill-accent-rgb), 0.22);
+    background: linear-gradient(135deg, rgba(var(--skill-accent-rgb), 0.14), transparent 46%);
     opacity: 0;
     transition: opacity 0.2s ease;
     pointer-events: none;
@@ -471,32 +546,40 @@ h2 {
 }
 
 .skill-card-primary {
-    border-color: rgba(56, 189, 248, 0.34);
+    border-color: rgba(var(--skill-accent-rgb), 0.34);
 }
 
 .skill-card-head {
     display: grid;
-    grid-template-columns: 58px 1fr;
-    gap: 16px;
+    grid-template-columns: 64px 1fr;
+    gap: 18px;
     align-items: start;
-    margin-bottom: 20px;
+    margin-bottom: 24px;
     position: relative;
     z-index: 1;
 }
 
 .skill-icon {
-    width: 58px;
-    height: 58px;
+    width: 64px;
+    height: 64px;
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    color: var(--primary);
-    background: rgba(56, 189, 248, 0.1);
-    border: 1px solid rgba(56, 189, 248, 0.24);
-    border-radius: 16px;
-    font-size: 0.82rem;
-    font-weight: 900;
-    letter-spacing: 0.04em;
+    color: var(--skill-accent);
+    background: linear-gradient(180deg, rgba(var(--skill-accent-rgb), 0.16), rgba(var(--skill-accent-rgb), 0.08));
+    border: 1px solid rgba(var(--skill-accent-rgb), 0.28);
+    border-radius: 18px;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04);
+}
+
+.skill-icon svg {
+    width: 28px;
+    height: 28px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.8;
+    stroke-linecap: round;
+    stroke-linejoin: round;
 }
 
 .skill-card-head h3 {
@@ -511,6 +594,7 @@ h2 {
 
 .card h3,
 .project-card h3 {
+    font-family: var(--font-display);
     font-size: 1.25rem;
     margin-bottom: 16px;
 }
@@ -534,6 +618,26 @@ h2 {
     border-radius: 999px;
     padding: 8px 12px;
     font-size: 0.9rem;
+}
+
+.skill-card .tags {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+}
+
+.skill-card .tags span {
+    min-height: 48px;
+    display: flex;
+    align-items: center;
+    color: var(--text);
+    background: rgba(var(--skill-accent-rgb), 0.08);
+    border: 1px solid rgba(var(--skill-accent-rgb), 0.18);
+    border-radius: 16px;
+    padding: 10px 14px;
+    font-size: 0.92rem;
+    line-height: 1.35;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.03);
 }
 
 .project-card {
@@ -975,6 +1079,16 @@ h2 {
         grid-template-columns: 1fr;
     }
 
+    .section-head-split {
+        grid-template-columns: 1fr;
+        gap: 18px;
+        margin-bottom: 32px;
+    }
+
+    .section-head-skills {
+        margin-bottom: 32px;
+    }
+
     .section {
         padding: 72px 0;
     }
@@ -1026,6 +1140,10 @@ h2 {
         gap: 8px;
     }
 
+    .skill-card .tags {
+        grid-template-columns: 1fr;
+    }
+
     .hero-meta span {
         padding: 7px 10px;
         font-size: 0.82rem;
@@ -1067,9 +1185,8 @@ h2 {
     }
 
     .skill-icon {
-        width: auto;
-        min-width: 58px;
-        padding: 0 14px;
+        width: 60px;
+        min-width: 60px;
     }
 
     .card,

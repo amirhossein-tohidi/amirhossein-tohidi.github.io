@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8"/>
@@ -6,6 +6,9 @@
     <meta name="description" content="Personal developer portfolio of Amirhossein Tohidi, .NET Backend Developer."/>
     <title>Amirhossein Tohidi | .NET Backend Developer</title>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Manrope:wght@700;800&display=swap" rel="stylesheet"/>
     <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg"/>
     <link rel="stylesheet" href="assets/css/styles.css"/>
 </head>
@@ -25,6 +28,7 @@
             <li><a href="#skills">Skills</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#experience">Experience</a></li>
+            <li><a href="#education">Education</a></li>
             <li><a href="#contact" class="nav-cta">Contact</a></li>
         </ul>
     </nav>
@@ -139,7 +143,8 @@
     <section id="about" class="section">
         <div class="container grid-two about-layout">
             <div class="about-heading">
-                <p class="section-label">About me</p>
+                <p class="section-label">About</p>
+                <h2>How I Work</h2>
             </div>
 
             <div class="section-text">
@@ -167,17 +172,26 @@
 
     <section id="skills" class="section section-muted">
         <div class="container">
-            <p class="section-label">Skills</p>
-            <h2>Technical Skills</h2>
-            <p class="section-intro">
-                A focused backend toolkit shaped by fintech products, distributed workflows,
-                production operations, and long-lived enterprise systems.
-            </p>
+            <div class="section-head section-head-skills">
+                <div>
+                    <p class="section-label">Skills</p>
+                    <h2>Technical</h2>
+                </div>
+                <p class="section-intro">
+                    A focused backend toolkit shaped by fintech products, distributed workflows,
+                    production operations, and long-lived enterprise systems.
+                </p>
+            </div>
 
             <div class="skills-grid">
-                <div class="card skill-card skill-card-primary">
+                <div class="card skill-card skill-card-primary skill-card-dotnet">
                     <div class="skill-card-head">
-                        <span class="skill-icon">.NET</span>
+                        <span class="skill-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24">
+                                <rect x="3.5" y="5.5" width="17" height="13" rx="3"/>
+                                <path d="M8 18.5v2M16 18.5v2M7 9h10M7 12h6"/>
+                            </svg>
+                        </span>
                         <div>
                             <h3>Backend Development</h3>
                             <p>Production APIs, service boundaries, and backend workflows built around .NET.</p>
@@ -188,15 +202,20 @@
                         <span>C#</span>
                         <span>ASP.NET Core</span>
                         <span>RESTful APIs</span>
-                        <span>gRPC</span>
                         <span>EF Core</span>
                         <span>Dapper</span>
+                        <span>gRPC</span>
                     </div>
                 </div>
 
-                <div class="card skill-card">
+                <div class="card skill-card skill-card-architecture">
                     <div class="skill-card-head">
-                        <span class="skill-icon">ARCH</span>
+                        <span class="skill-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M12 4 4 8l8 4 8-4-8-4Z"/>
+                                <path d="M4 12l8 4 8-4M4 16l8 4 8-4"/>
+                            </svg>
+                        </span>
                         <div>
                             <h3>Architecture & Design</h3>
                             <p>Maintainable domain models, clear application layers, and scalable service design.</p>
@@ -206,34 +225,47 @@
                         <span>Clean Architecture</span>
                         <span>DDD</span>
                         <span>CQRS</span>
+                        <span>Microservices</span>
+                        <span>Design Patterns</span>
                         <span>SOLID</span>
                         <span>OOP</span>
-                        <span>Design Patterns</span>
-                        <span>Microservices</span>
                     </div>
                 </div>
 
-                <div class="card skill-card">
+                <div class="card skill-card skill-card-messaging">
                     <div class="skill-card-head">
-                        <span class="skill-icon">EDA</span>
+                        <span class="skill-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24">
+                                <circle cx="6" cy="7" r="2"/>
+                                <circle cx="18" cy="7" r="2"/>
+                                <circle cx="12" cy="17" r="2"/>
+                                <path d="M8 7h8M7.2 8.6l3.6 6.1M16.8 8.6l-3.6 6.1"/>
+                            </svg>
+                        </span>
                         <div>
                             <h3>Messaging & Reliability</h3>
                             <p>Asynchronous processing, consistency patterns, retries, and resilient workflows.</p>
                         </div>
                     </div>
                     <div class="tags">
+                        <span>Event-Driven Architecture</span>
                         <span>Kafka</span>
                         <span>RabbitMQ</span>
-                        <span>Event-Driven Architecture</span>
                         <span>Inbox/Outbox Pattern</span>
                         <span>Saga Pattern</span>
                         <span>Retry Mechanisms</span>
                     </div>
                 </div>
 
-                <div class="card skill-card">
+                <div class="card skill-card skill-card-data">
                     <div class="skill-card-head">
-                        <span class="skill-icon">DB</span>
+                        <span class="skill-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24">
+                                <ellipse cx="12" cy="6.5" rx="7.5" ry="3"/>
+                                <path d="M4.5 6.5v11c0 1.66 3.36 3 7.5 3s7.5-1.34 7.5-3v-11"/>
+                                <path d="M4.5 12c0 1.66 3.36 3 7.5 3s7.5-1.34 7.5-3"/>
+                            </svg>
+                        </span>
                         <div>
                             <h3>Databases & Storage</h3>
                             <p>Relational, document, cache, search, and analytical storage for backend systems.</p>
@@ -250,9 +282,14 @@
                     </div>
                 </div>
 
-                <div class="card skill-card">
+                <div class="card skill-card skill-card-testing">
                     <div class="skill-card-head">
-                        <span class="skill-icon">QA</span>
+                        <span class="skill-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M12 3.5 18.5 6v5.25c0 4.36-2.81 7.92-6.5 9.25-3.69-1.33-6.5-4.89-6.5-9.25V6L12 3.5Z"/>
+                                <path d="m9 12.25 2 2 4-4"/>
+                            </svg>
+                        </span>
                         <div>
                             <h3>Testing</h3>
                             <p>Unit, integration, acceptance, and container-backed tests for reliable releases.</p>
@@ -262,16 +299,22 @@
                         <span>Unit Testing</span>
                         <span>Integration Testing</span>
                         <span>Acceptance Testing</span>
-                        <span>Gherkin</span>
                         <span>Reqnroll</span>
                         <span>SpecFlow</span>
+                        <span>Gherkin</span>
                         <span>Testcontainers</span>
                     </div>
                 </div>
 
-                <div class="card skill-card">
+                <div class="card skill-card skill-card-ops">
                     <div class="skill-card-head">
-                        <span class="skill-icon">OPS</span>
+                        <span class="skill-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M4 18h16"/>
+                                <path d="M6.5 18v-5.5M12 18V9M17.5 18v-8.5"/>
+                                <path d="m5 9 4-3 3 2 6-4"/>
+                            </svg>
+                        </span>
                         <div>
                             <h3>DevOps & Observability</h3>
                             <p>Local environments, delivery pipelines, metrics, logs, and operational visibility.</p>
@@ -709,7 +752,7 @@
       </svg>
                     </span>
                     <span class="contact-label">Phone</span>
-                    <span class="contact-value">Messaging apps available · (+98) 912 029 9061</span>
+                    <span class="contact-value">Messaging apps available &middot; (+98) 912 029 9061</span>
                 </a>
             </div>
         </div>
@@ -718,7 +761,7 @@
 
 <footer class="footer">
     <div class="container">
-        <p>© <span id="year"></span> Amirhossein Tohidi. All rights reserved.</p>
+        <p>&copy; <span id="year"></span> Amirhossein Tohidi. All rights reserved.</p>
     </div>
 </footer>
 
